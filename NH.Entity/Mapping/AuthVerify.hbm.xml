@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NH.Entity" namespace="NH.Entity.Model">
+  <class name="AuthVerify" table="`AuthVerify`">
+    <id name="ID" type="Int32" unsaved-value="null">
+      <column name="ID" length="4" sql-type="int" not-null="true" unique="true" index="PK_AuthVerify"/>
+      <generator class="native" />
+    </id>
+    <property name="UserName" type="String">
+      <column name="UserName" length="50" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="Phone" type="String">
+      <column name="Phone" length="20" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="VerifyCode" type="String">
+      <column name="VerifyCode" length="10" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="Expired" type="Int32">
+      <column name="Expired" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="CreateTime" type="DateTime">
+      <column name="CreateTime" length="8" sql-type="datetime" not-null="false"/>
+    </property>        
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+查询一级类目出错：“NH.Commons.Data.DBHelper”的类型初始值设定项引发异常。
+查询一级类目出错：“NH.Commons.Data.DBHelper”的类型初始值设定项引发异常。
+查询一级类目出错：从作用域“”引用了“NH.Entity.Model.BaseCategory”类型的变量“c”，但该变量未定义
+查询一级类目出错：从作用域“”引用了“NH.Entity.Model.BaseCategory”类型的变量“c”，但该变量未定义
+查询一级类目出错：从作用域“”引用了“NH.Entity.Model.BaseCategory”类型的变量“c”，但该变量未定义

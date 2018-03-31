@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NH.Entity" namespace="NH.Entity.Model">
+  <class name="GoodsPropertyRelation" table="`GoodsPropertyRelation`">
+    <id name="ID" type="Int32" unsaved-value="null">
+      <column name="ID" length="4" sql-type="int" not-null="true" unique="true" index="PK_GoodsPropertyRelation"/>
+      <generator class="native" />
+    </id>
+    <property name="GoodsID" type="Int32">
+      <column name="GoodsID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="StockID" type="Int32">
+      <column name="StockID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="PropertyID" type="Int32">
+      <column name="PropertyID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="PropertyName" type="String">
+      <column name="PropertyName" length="200" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="PropertyValueID" type="Int32">
+      <column name="PropertyValueID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="PropertyValue" type="String">
+      <column name="PropertyValue" length="50" sql-type="varchar" not-null="false"/>
+    </property>    
+  </class>
+</hibernate-mapping>

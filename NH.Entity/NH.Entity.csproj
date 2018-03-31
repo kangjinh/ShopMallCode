@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{091E45EE-B3C3-4113-9A19-2657CC4EF41D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NH.Entity</RootNamespace>
+    <AssemblyName>NH.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\BasicInfo.cs" />
+    <Compile Include="EnumLibrary\BannerType.cs" />
+    <Compile Include="EnumLibrary\ClientType.cs" />
+    <Compile Include="EnumLibrary\LangType.cs" />
+    <Compile Include="EnumLibrary\LogsOperateType.cs" />
+    <Compile Include="EnumLibrary\GoodsType.cs" />
+    <Compile Include="EnumLibrary\MsgType.cs" />
+    <Compile Include="EnumLibrary\OrderState.cs" />
+    <Compile Include="EnumLibrary\PayType.cs" />
+    <Compile Include="EnumLibrary\Regplatform.cs" />
+    <Compile Include="EnumLibrary\TableRecordType.cs" />
+    <Compile Include="Model\AuthVerify.cs" />
+    <Compile Include="Model\Banner.cs" />
+    <Compile Include="Model\BaseCategory.cs" />
+    <Compile Include="Model\Goods.cs" />
+    <Compile Include="Model\GoodsDescription.cs" />
+    <Compile Include="Model\GoodsOrder.cs" />
+    <Compile Include="Model\GoodsProperty.cs" />
+    <Compile Include="Model\GoodsPropertyRelation.cs" />
+    <Compile Include="Model\GoodsPropertyValue.cs" />
+    <Compile Include="Model\GoodsStock.cs" />
+    <Compile Include="Model\GroupMember.cs" />
+    <Compile Include="Model\GroupMsg.cs" />
+    <Compile Include="Model\GroupTalk.cs" />
+    <Compile Include="Model\OrderPay.cs" />
+    <Compile Include="Model\OrderPayDetail.cs" />
+    <Compile Include="Model\OrderPayInfo.cs" />
+    <Compile Include="Model\OrderStateChangeHistory.cs" />
+    <Compile Include="Model\Token.cs" />
+    <Compile Include="Model\UserCategory.cs" />
+    <Compile Include="Model\UserFootPrint.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\V2WeixinAccount.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\Request\PositionReq.cs" />
+    <Compile Include="Web\Request\RegisterReq.cs" />
+    <Compile Include="Web\Request\RequestBase.cs" />
+    <Compile Include="Web\Request\SendCodeReq.cs" />
+    <Compile Include="Web\Request\UserCategoryReq.cs" />
+    <Compile Include="Web\Response\CategoryResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NH.EnumLibrary\NH.EnumLibrary.csproj">
+      <Project>{e317af7f-89fb-4bab-9e87-89719b192883}</Project>
+      <Name>NH.EnumLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Users.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\UserCategory.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\AuthVerify.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\BaseCategory.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Goods.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GoodsDescription.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GoodsProperty.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GoodsPropertyRelation.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GoodsPropertyValue.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GoodsStock.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GoodsOrder.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\OrderStateChangeHistory.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\OrderPay.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\OrderPayDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\OrderPayInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GroupTalk.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GroupMember.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\GroupMsg.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Banner.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\UserFootPrint.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

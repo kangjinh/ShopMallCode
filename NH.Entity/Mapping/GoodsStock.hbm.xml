@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NH.Entity" namespace="NH.Entity.Model">
+  <class name="GoodsStock" table="`GoodsStock`">
+    <id name="ID" type="Int32" unsaved-value="null">
+      <column name="ID" length="4" sql-type="int" not-null="true" unique="true" index="PK_GoodsStock"/>
+      <generator class="native" />
+    </id>
+    <property name="GoodsID" type="Int32">
+      <column name="GoodsID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="SKUProperty" type="String">
+      <column name="SKUProperty" length="800" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="Price" type="Int32">
+      <column name="Price" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="ActualPrice" type="Int32">
+      <column name="ActualPrice" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="Stock" type="Int32">
+      <column name="Stock" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="SalsCount" type="Int32">
+      <column name="SalsCount" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="IsLocked" type="Boolean">
+      <column name="IsLocked" length="1" sql-type="bit" not-null="false"/>
+    </property>
+  </class>
+</hibernate-mapping>

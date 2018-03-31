@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NH.Entity" namespace="NH.Entity.Model">
+  <class name="GroupTalk" table="`GroupTalk`">
+    <id name="ID" type="Int32" unsaved-value="null">
+      <column name="ID" length="4" sql-type="int" not-null="true" unique="true" index="PK_GroupTalk"/>
+      <generator class="native" />
+    </id>
+    <property name="GroupName" type="String">
+      <column name="GroupName" length="50" sql-type="varchar" not-null="false"/>
+    </property>       
+    <property name="Createor" type="Int32">
+      <column name="Createor" length="4" sql-type="int" not-null="false"/>
+    </property>
+  </class>
+</hibernate-mapping>

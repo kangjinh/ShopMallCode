@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NH.Entity" namespace="NH.Entity.Model">
+  <class name="OrderPayDetail" table="`OrderPayDetail`">
+    <id name="ID" type="Int32" unsaved-value="null">
+      <column name="ID" length="4" sql-type="int" not-null="true" unique="true" index="PK_OrderPayDetail"/>
+      <generator class="native" />
+    </id>
+    <property name="PayID" type="Int32">
+      <column name="PayID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="OrderID" type="Int32">
+      <column name="OrderID" length="4" sql-type="int" not-null="false"/>
+    </property>
+    <property name="PayType" type="Int32">
+      <column name="PayType" length="1" sql-type="tinyint" not-null="false"/>
+    </property>
+    <property name="Amount" type="Decimal">
+      <column name="Amount" length="9" sql-type="decimal" not-null="false"/>
+    </property>
+    <property name="CouponID" type="Int32">
+      <column name="CouponID" length="4" sql-type="int" not-null="false"/>
+    </property>            
+  </class>
+</hibernate-mapping>
